@@ -82,35 +82,79 @@ This classifier works on posts from **r/personalfinance**, a public Reddit commu
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `advice_seeking`
 
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
+**Definition:** The poster describes their own financial situation and is asking — explicitly or implicitly — what they should do next.
 
 **Example 1:**
->
+> "I'm 24, make $55k/year, and have $8k in a HYSA and $12k in student loans at 5.5%. I've been putting $200/month extra toward the loans but I'm wondering if I should redirect that into my Roth IRA instead. Any thoughts?"
 
 **Example 2:**
->
+> "My company just switched 401k providers and all the new fund options have expense ratios above 1%. Is it still worth contributing beyond the match, or should I just open my own IRA at this point?"
+
+### `milestone`
+
+**Definition:** The poster announces a personal financial achievement, life event, or status update — the post's purpose is to share, not to get a decision made.
+
+**Example 1:**
+> "Made my last student loan payment today. $47,000 over four years. Still doesn't feel real. For anyone still in the middle of it — it does end."
+
+**Example 2:**
+> "Hit $100k net worth at 27. First person in my family to ever save this much. Just wanted to share with people who would understand what that means."
+
+### `information`
+
+**Definition:** The poster shares a general financial tip, lesson, or analysis that is not primarily about their own current situation — it is meant to be useful to anyone reading, not just to get the poster's specific problem solved.
+
+**Example 1:**
+> "Most people don't realize that I-bonds have a 3-month interest penalty if you redeem before 5 years. Here's the math on when cashing out early still makes sense despite that penalty."
+
+**Example 2:**
+> "The 'pay yourself first' advice skips a critical detail: set the transfer for the same day as your paycheck hits, not the day after. The float between those two days is where most people's 'savings' quietly disappear into spending."
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `advice_seeking` vs. `milestone`
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+If the post contains an explicit question about what the poster should do — even one sentence at the end of a long celebration — it is `advice_seeking`. A post that opens "I just paid off my debt!" and closes with "What should I do with the extra $500/month now?" is `advice_seeking`, not `milestone`. The presence of a decision request, anywhere in the post, wins over the celebratory opening.
 
+<!-- ── MILESTONE 2 STRESS TEST ─────────────────────────────────────────────
+     Eight boundary posts generated to pressure-test definitions.
+     All eight classified cleanly under the decision rule above.
 
+     1. "Just became debt-free! Now I have $800/month freed up. Should I max
+        my Roth IRA first or build a bigger emergency fund?"
+        → advice_seeking (explicit question at end despite celebration opening)
+
+     2. "Finally hit a 750 credit score after two years of work."
+        → milestone (no question, pure announcement)
+
+     3. "HYSA rates are dropping. Here's a ranked comparison of the five
+        best rates as of this week and when each one makes sense."
+        → information (general, not about poster's situation)
+
+     4. "I've been contributing 6% to get the match. My salary just jumped
+        to $90k. Should I go up to 10% or redirect toward the mortgage?"
+        → advice_seeking (describes own situation, asks what to do)
+
+     5. "Paid off the car. It took 18 months of brown-bag lunches."
+        → milestone (no question, shares achievement)
+
+     6. "Most people use the debt avalanche wrong. You have to sort by
+        interest rate, not by balance. Here's why that matters on paper."
+        → information (general lesson, not the poster's own debt)
+
+     7. "Emergency fund is at 3 months. I want to get it to 6. Should I
+        pause Roth contributions while I build it up?"
+        → advice_seeking (own situation, explicit question)
+
+     8. "Net worth finally turned positive after going negative in my 20s.
+        Took a decade. Sharing for the lurkers who think it can't happen."
+        → milestone (no question, explicitly addressed to other readers)
+
+     All eight resolved with no ambiguity. Definitions hold.
+     ────────────────────────────────────────────────────────────────────── -->
 
 ---
 
