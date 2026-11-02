@@ -42,7 +42,35 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
+This classifier works on posts from **r/personalfinance**, a public Reddit community of over 18 million members discussing budgeting, debt, investing, and major financial decisions. The community produces a wide variety of post types — some ask for direct advice on a specific situation, some share a milestone or life event, and some offer information or a lesson learned — making it a strong candidate for multi-class text classification. The classifier will sort posts into one of three categories based on what the post is *doing* rather than what financial topic it covers.
 
+<!-- ── MILESTONE 1 NOTES ──────────────────────────────────────────────────
+     Community: r/personalfinance
+     Read ~35 representative posts (top/hot from Nov 2025).
+
+     Candidate distinctions observed in the actual text:
+
+     1. SPECIFIC NUMBERS vs. NO NUMBERS
+        Some posts name an exact figure: "I have $47k in student loans at 6.8%",
+        "my take-home is $3,200/month", "we just hit $100k net worth."
+        Most posts name no figure at all — they describe the situation in
+        relative terms ("a lot of debt", "decent savings").
+
+     2. EXPLICIT REQUEST vs. NO REQUEST
+        Some posts end with a direct question: "Should I pay this off or invest
+        the difference?" "Am I missing anything?" Others are declarations or
+        stories with no question asked — the writer is sharing, not asking.
+
+     3. NARRATIVE ARC vs. POINT-IN-TIME SNAPSHOT
+        Some posts tell a story with a before/after or a sequence of events
+        ("I grew up broke, worked three jobs, and just became debt-free").
+        Others describe only the current state with no backstory.
+
+     4. ADVICE ALREADY TRIED vs. COLD ASK
+        Some posts say what they've already done or researched before posting
+        ("I've read the wiki and I'm between X and Y"). Others open cold with
+        no sign the writer looked anything up first.
+     ────────────────────────────────────────────────────────────────────── -->
 
 ---
 
