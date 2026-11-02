@@ -164,44 +164,42 @@ If the post contains an explicit question about what the poster should do — ev
      cases. -->
 
 **Where the posts came from:**
+r/personalfinance — posts collected from the Hot and Top feeds across multiple browsing sessions. Posts selected to cover a range of financial topics (debt, retirement, housing, salary, insurance) and a range of lengths, from single-sentence announcements to multi-paragraph situations.
 
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:**
+Cold first: the first 20 posts were labeled without any AI assistance, using only the definitions above. These are marked `cold` in the note column. The remaining 180 were pre-labeled by Claude (given the three definitions and the decision rule), then reviewed individually — every label was read and confirmed or corrected before being accepted. Rows with AI pre-labeling are marked `pre-labeled by AI, reviewed` in the note column.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `advice_seeking` | 84 | 42% |
+| `milestone` | 66 | 33% |
+| `information` | 50 | 25% |
+| **Total** | **200** | 100% |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
-> *The post:*
+> *The post:* "Three months ago I posted asking for help because I was $2,000 overdrawn and couldn't make rent. Today I made my first Roth IRA contribution. Thank you to everyone who responded."
 >
-> *Could have been:*
+> *Could have been:* `advice_seeking` — the post references a prior situation where the poster needed help, so it reads partly like the continuation of a problem thread.
 >
-> *I chose, because:*
+> *I chose `milestone`, because:* The post contains no question and no decision being sought. It is pure announcement. The reference to a past help request is backstory, not a current ask. The closing sentence thanks people — it doesn't ask them anything.
 
 **2.**
-> *The post:*
+> *The post:* "I've been afraid of looking at my finances for four years. Today I finally opened everything up, added it all together, and made a budget. I don't know why I was so scared. Now I just have to do something about what I found."
 >
-> *Could have been:*
+> *Could have been:* `advice_seeking` — the last sentence ("Now I just have to do something about what I found") could be read as an implicit request for what to do next.
 >
-> *I chose, because:*
+> *I chose `milestone`, because:* The sentence reads as a self-directed resolution, not a question. There is no ask, no "what should I do," and no financial details shared that would let anyone give specific advice. The post's purpose is sharing the act of confronting finances, not requesting a next step.
 
 **3.**
-> *The post:*
+> *The post:* "Dollar-cost averaging — investing a fixed amount at regular intervals regardless of market conditions — doesn't outperform lump-sum investing on average. Studies consistently show lump-sum beats DCA about two-thirds of the time. DCA's value is psychological: it reduces the anxiety of 'what if I invest right before a crash,' which for most people is worth the slight expected return cost."
 >
-> *Could have been:*
+> *Could have been:* `advice_seeking` — the post could be read as someone reasoning through their own investment decision and sharing it for validation.
 >
-> *I chose, because:*
+> *I chose `information`, because:* The post addresses "most people" generically, cites studies, and does not describe the poster's personal situation or ask what they should do. It is written to be useful to any reader, not to get the poster's specific problem solved. A reader couldn't give advice here — there's nothing personal to advise on.
 
 ---
 
@@ -234,17 +232,18 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I gave Claude my three label definitions and the decision rule, then asked it to generate eight posts that sit on the boundaries between labels — posts that could plausibly belong to two categories — to stress-test whether the definitions were tight enough before labeling 200 posts.
+- *What came back:* Eight posts, covering the advice_seeking/milestone and information/advice_seeking boundaries. Six of the eight resolved cleanly. Two required me to apply the decision rule explicitly (celebratory opening + end question, and general-sounding text that mentioned "I" once).
+- *What I changed:* Nothing in the definitions — they held. But the exercise confirmed that the decision rule ("if there's a question anywhere, it's advice_seeking") needed to be stated explicitly rather than assumed. I added it to the taxonomy section before labeling.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* After labeling 20 posts cold, I gave Claude my definitions and the decision rule and asked it to pre-label batches of posts with one of the three labels and a one-sentence justification for each.
+- *What came back:* Labels with justifications. The model was accurate on clear cases but tended to label posts as `advice_seeking` when a post shared a decision the poster had already made ("I decided to pay off the card first — here's why it worked"). Those are `milestone`, not `advice_seeking`, because the decision is done.
+- *What I changed:* Corrected every instance where a post described a past decision as if it were a current ask. Also corrected a handful of `information` posts the model labeled as `advice_seeking` because they used first person ("I always tell people to check their vesting schedule before leaving" → `information`, not about the poster's own situation).
 
 **Pre-labelling disclosure:**
+180 of the 200 posts were pre-labeled by Claude using my definitions and decision rule. Every pre-labeled row was individually read and the label was either confirmed or corrected before being added to labels.csv. The first 20 rows (marked `cold` in the note column) were labeled by me without any AI assistance, as a consistency check before using AI for the rest.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
