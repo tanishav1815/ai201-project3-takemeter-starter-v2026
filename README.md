@@ -207,15 +207,23 @@ Cold first: the first 20 posts were labeled without any AI assistance, using onl
 
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
-**Base model:**
+**Base model:** `distilbert-base-uncased`
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Settings:** 3 epochs · learning rate 2e-5 · batch size 16 · seed 42 · max token length 128
 
-**Anything I changed from the defaults, and why:**
+**Anything I changed from the defaults, and why:** Nothing changed from the notebook defaults. The dataset is small (200 posts, 128 tokens is more than enough for most r/personalfinance posts) and the task is clean enough that the defaults are a reasonable starting point.
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+**Device:** `mps` — Apple Silicon GPU (MPS). This is part of the result: two runs on the same data with the same seed on different hardware can produce different numbers.
+
+**Split sizes:** 139 train · 31 val · 30 test (stratified 70/15/15)
+
+| Label | Train | Val | Test |
+|---|---|---|---|
+| `advice_seeking` | 58 | 13 | 13 |
+| `milestone` | 46 | 10 | 10 |
+| `information` | 35 | 8 | 7 |
+
+`information` has only 7 examples in the test split. Its F1 will move more between seeds than the other two labels, which is worth noting when reading the unit 6 results.
 
 
 
