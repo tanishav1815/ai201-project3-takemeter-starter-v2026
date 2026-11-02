@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.7666666666666667,
+    "f1_macro": 0.5766283524904214,
+    "per_label": {
+      "advice_seeking": {
+        "precision": 0.8125,
+        "recall": 1.0,
+        "f1": 0.896551724137931,
+        "support": 13
+      },
+      "information": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 7
+      },
+      "milestone": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333333,
+        "support": 10
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "A W-4 is not a fixed document. You can update it at any time by submitting a new form to your employer's HR department. If you have a life change \u2014 marriage, divorce, a child, a second job \u2014 it's worth revisiting to make sure your withholding is still accurate. The IRS withholding estimator at irs.gov is the most reliable way to check.",
+      "gold": "information",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "Just got laid off after 6 years at my company. I have a $22,000 severance coming and about $40k in savings. I'm 35 with no kids and rent. Should I be doing anything specific with the severance beyond just letting it sit in my HYSA while I job hunt?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "I started investing with $25/month three years ago and that account just crossed $2,000. The amounts are still small but the habit is locked in.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "The annual gift tax exclusion for 2024 is $18,000 per person, per recipient. You can give up to this amount to any number of people without filing a gift tax return. Above that threshold, you need to file Form 709, but you likely won't owe tax until your lifetime total gifts exceed the federal estate tax exemption.",
+      "gold": "information",
+      "predicted": "milestone"
+    },
+    {
+      "text": "First month in three years where I didn't overdraft my checking account. Genuinely didn't think I could do it. Had $47 left at the end.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "I've been afraid of looking at my finances for four years. Today I finally opened everything up, added it all together, and made a budget. I don't know why I was so scared. Now I just have to do something about what I found.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "Funded my kid's 529 account for the first time today. She's 4. I want her to have options I didn't have.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "My HYSA balance officially exceeds my student loan balance for the first time. It doesn't change anything logistically but I've been waiting to reach this milestone.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "I just got a job offer for $15,000 more per year. The new job has worse benefits. How do I calculate whether it's actually worth it?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "I got a HELOC approved today on my first house. I never thought I'd own property, let alone have equity in it.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "I work two jobs and my total income this year will be about $95,000. Neither employer knows about the other. How should I handle my W-4s so I don't owe a huge amount in April?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "My wife and I file separately because we thought it saved us money but our accountant friend just told us that almost nobody benefits from filing separately. We both work and make similar incomes. Should we switch to joint?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "Should I open a 529 for my nephew as a gift? He's 3 years old and I want to help. I'm not his parent so I'm wondering if there are complications.",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "I'm getting married next year and my fianc\u00e9e has $28,000 in credit card debt. I have zero debt and about $45,000 in savings. Should we combine finances immediately after the wedding or keep things separate while she pays down the debt?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "We bought a used car for cash today. $8,400. First car I've ever owned without a payment. It's a 2016 with 74,000 miles and I love it.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "A Roth IRA has a contribution limit, but it does not have a limit on conversions. If you have money in a traditional IRA, you can convert any amount to a Roth in a given year \u2014 you'll owe income tax on the converted amount, but there's no cap. This is how the backdoor Roth works for high earners.",
+      "gold": "information",
+      "predicted": "milestone"
+    },
+    {
+      "text": "My partner and I are trying to decide whether to pay off our car loan ($9,200 left at 4.9%) or use that money to max out a Roth IRA for the year. We have 4 months of emergency fund already. What would you do?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "If you switched jobs this year, your old employer's 401k is still yours and you have several options \u2014 you can leave it, roll it to your new employer's plan, or roll it to an IRA. The IRA rollover almost always gives you the most investment options and the lowest fees. The one time to skip it: if your new employer plan has institutional funds you can't access otherwise.",
+      "gold": "information",
+      "predicted": "milestone"
+    },
+    {
+      "text": "Got a collection notice for a medical bill I didn't know was in collections. It's $840. I can pay it but I read that paying a collection can actually hurt your score. Is that still true and what should I do?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "Got my first paycheck with no federal student loan withholding since 2017. It's $387 more a month than I'm used to. Just needed to tell someone.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "When calculating whether to pay off debt or invest, the comparison isn't just the interest rate vs. expected market return. Factor in: is the debt interest deductible? Is there an employer match available that represents an instant 50-100% return? Are you comparing to tax-advantaged or taxable investment returns? The simple interest rate comparison misses a lot.",
+      "gold": "information",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "When you roll over a 401k, request a direct rollover to the new institution rather than taking the check yourself. If the check is made out to you, the plan administrator is required to withhold 20% for taxes \u2014 even if you intend to roll it over. You'd then have to make up that 20% out of pocket within 60 days to avoid it being treated as a distribution.",
+      "gold": "information",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "My lease ends in 60 days and I need to decide: renew at $1,600, move to a cheaper apartment at $1,200 (but 45 min further from work), or try to buy. I make $68k, have $14k saved, and credit score is 710.",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "I have $50,000 in a brokerage account from an inheritance. I'm 29 and this is separate from my retirement accounts. Should I leave it in the index funds it's already in or do something else with it?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "If you have more than 20% equity in your home, you can request to have PMI removed without waiting for automatic cancellation. Contact your lender and ask about their appraisal requirements. In a market where home values have increased significantly, you may already be at 20% equity based on current value even if you're not based on original purchase price.",
+      "gold": "information",
+      "predicted": "milestone"
+    },
+    {
+      "text": "I'm 55 and I have $320,000 in my 401k. I want to retire at 62. Based on the 4% rule that seems like not enough but I'll also have Social Security. How do I actually figure out if I'm on track?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "I want to help my mom financially \u2014 she's 67 and her only income is $1,100/month from Social Security. Is there a tax-efficient way to give her money? Can I just transfer it or does that trigger something?",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "Made a $10,000 principal-only payment on my mortgage today with my bonus. That's 14 months off the back end of the loan.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    },
+    {
+      "text": "Should I pay off my car early? I have a $12,000 balance at 2.9% and I have $18,000 in savings. Part of me wants to just wipe it out but 2.9% seems low enough that I should probably invest instead.",
+      "gold": "advice_seeking",
+      "predicted": "advice_seeking"
+    },
+    {
+      "text": "We finished our will, living will, and power of attorney documents today. I've been putting this off for four years. If you have kids and haven't done this \u2014 please do it.",
+      "gold": "milestone",
+      "predicted": "milestone"
+    }
+  ]
+}

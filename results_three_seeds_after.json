@@ -1,0 +1,150 @@
+{
+  "run_label": "after",
+  "improvement": "epochs increased from 3 to 5",
+  "device": "mps",
+  "device_name": "Apple Silicon GPU (MPS)",
+  "torch_version": "2.15.0",
+  "model": "distilbert-base-uncased",
+  "epochs": 5,
+  "learning_rate": 2e-05,
+  "batch_size": 16,
+  "max_length": 128,
+  "name": "Tanisha Verma",
+  "email": "tanishav1815@gmail.com",
+  "seeds": [
+    42,
+    7,
+    2024
+  ],
+  "results": [
+    {
+      "seed": 42,
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "per_label": {
+        "advice_seeking": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 13
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "information": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 7
+        }
+      },
+      "confusion": {
+        "advice_seeking": {
+          "advice_seeking": 13,
+          "milestone": 0,
+          "information": 0
+        },
+        "milestone": {
+          "advice_seeking": 0,
+          "milestone": 10,
+          "information": 0
+        },
+        "information": {
+          "advice_seeking": 0,
+          "milestone": 0,
+          "information": 7
+        }
+      },
+      "n_test": 30
+    },
+    {
+      "seed": 7,
+      "accuracy": 1.0,
+      "f1_macro": 1.0,
+      "per_label": {
+        "advice_seeking": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 13
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "information": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 7
+        }
+      },
+      "confusion": {
+        "advice_seeking": {
+          "advice_seeking": 13,
+          "milestone": 0,
+          "information": 0
+        },
+        "milestone": {
+          "advice_seeking": 0,
+          "milestone": 10,
+          "information": 0
+        },
+        "information": {
+          "advice_seeking": 0,
+          "milestone": 0,
+          "information": 7
+        }
+      },
+      "n_test": 30
+    },
+    {
+      "seed": 2024,
+      "accuracy": 0.9333333333333333,
+      "f1_macro": 0.9391534391534391,
+      "per_label": {
+        "advice_seeking": {
+          "precision": 0.8666666666666667,
+          "recall": 1.0,
+          "f1": 0.9285714285714286,
+          "support": 13
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "support": 10
+        },
+        "information": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 7
+        }
+      },
+      "confusion": {
+        "advice_seeking": {
+          "advice_seeking": 13,
+          "milestone": 0,
+          "information": 0
+        },
+        "milestone": {
+          "advice_seeking": 2,
+          "milestone": 8,
+          "information": 0
+        },
+        "information": {
+          "advice_seeking": 0,
+          "milestone": 0,
+          "information": 7
+        }
+      },
+      "n_test": 30
+    }
+  ]
+}
